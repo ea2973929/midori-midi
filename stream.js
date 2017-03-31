@@ -12,18 +12,18 @@ function Stream(str) {
 	function readInt32() {
 		var result = (
 			(str.charCodeAt(position) << 24)
-			+ (str.charCodeAt(position + 1) << 16)
-			+ (str.charCodeAt(position + 2) << 8)
-			+ str.charCodeAt(position + 3));
+			    + (str.charCodeAt(position + 1) << 16)
+			    + (str.charCodeAt(position + 2) << 8)
+			    + str.charCodeAt(position + 3));
 		position += 4;
 		return result;
 	}
-
+    
 	/* read a big-endian 16-bit integer */
 	function readInt16() {
 		var result = (
 			(str.charCodeAt(position) << 8)
-			+ str.charCodeAt(position + 1));
+			    + str.charCodeAt(position + 1));
 		position += 2;
 		return result;
 	}
@@ -41,8 +41,8 @@ function Stream(str) {
 	}
 	
 	/* read a MIDI-style variable-length integer
-		(big-endian value in groups of 7 bits,
-		with top bit set to signify that another byte follows)
+	   (big-endian value in groups of 7 bits,
+	   with top bit set to signify that another byte follows)
 	*/
 	function readVarInt() {
 		var result = 0;
@@ -65,5 +65,5 @@ function Stream(str) {
 		'readInt16': readInt16,
 		'readInt8': readInt8,
 		'readVarInt': readVarInt
-	}
+	};
 }

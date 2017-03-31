@@ -1,0 +1,27 @@
+{
+  "name": "midori-midi",
+  "version": "0.0.1",
+  "description": "A library for working with midi files",
+  "main": "test.js",
+  "scripts": {
+    "test": "tape"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ea2973929/midori-midi.git"
+  },
+  "keywords": [
+    "midi",
+    "music",
+    "player"
+  ],
+  "author": "Erik Nilsson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ea2973929/midori-midi/issues"
+  },
+  "homepage": "https://github.com/ea2973929/midori-midi",
+  "dependencies": {
+    "tape": "^4.6.3"
+  }
+}
